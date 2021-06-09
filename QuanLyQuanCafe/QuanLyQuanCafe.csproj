@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AEB92ECA-458E-477D-B553-614B245EDD0F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QuanLyQuanCafe</RootNamespace>
+    <AssemblyName>QuanLyQuanCafe</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>1069317E1347C1BE128D75AA452E816EFBAEB023</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>QuanLyQuanCafe_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAO\BanDAO.cs" />
+    <Compile Include="DAO\ChiTietHoaDonDAO.cs" />
+    <Compile Include="DAO\DanhMucSanPhamDAO.cs" />
+    <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\HoaDonDAO.cs" />
+    <Compile Include="DAO\NhanVienDAO.cs" />
+    <Compile Include="DAO\SanPhamDAO.cs" />
+    <Compile Include="DAO\ThucDonDAO.cs" />
+    <Compile Include="DThang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DThang.Designer.cs">
+      <DependentUpon>DThang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\Ban.cs" />
+    <Compile Include="DTO\ChiTietHoaDon.cs" />
+    <Compile Include="DTO\DanhMucSanPham.cs" />
+    <Compile Include="DTO\HoaDon.cs" />
+    <Compile Include="DTO\NhanVien.cs" />
+    <Compile Include="DTO\SanPham.cs" />
+    <Compile Include="DTO\ThucDon.cs" />
+    <Compile Include="FormDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDangNhap.Designer.cs">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GiaoDienChinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GiaoDienChinh.Designer.cs">
+      <DependentUpon>GiaoDienChinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GTNgay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GTNgay.Designer.cs">
+      <DependentUpon>GTNgay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GTTongdoanhthu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GTTongdoanhthu.Designer.cs">
+      <DependentUpon>GTTongdoanhthu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuanLyBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyBan.Designer.cs">
+      <DependentUpon>QuanLyBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyMenu.Designer.cs">
+      <DependentUpon>QuanLyMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyNhanVien.Designer.cs">
+      <DependentUpon>QuanLyNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyQuanCafeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyQuanCafeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Table.cs" />
+    <Compile Include="Table1.cs" />
+    <Compile Include="TableDAO.cs" />
+    <Compile Include="ThongKeSP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongKeSP.Designer.cs">
+      <DependentUpon>ThongKeSP.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DThang.resx">
+      <DependentUpon>DThang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDangNhap.resx">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GiaoDienChinh.resx">
+      <DependentUpon>GiaoDienChinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GTNgay.resx">
+      <DependentUpon>GTNgay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GTTongdoanhthu.resx">
+      <DependentUpon>GTTongdoanhthu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="QuanLyBan.resx">
+      <DependentUpon>QuanLyBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyMenu.resx">
+      <DependentUpon>QuanLyMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyNhanVien.resx">
+      <DependentUpon>QuanLyNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongKeSP.resx">
+      <DependentUpon>ThongKeSP.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="QuanLyQuanCafeDataSet.xsc">
+      <DependentUpon>QuanLyQuanCafeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyQuanCafeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyQuanCafeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyQuanCafeDataSet.xss">
+      <DependentUpon>QuanLyQuanCafeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\Capture.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inkedat3_LI.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\icons8-cafe-96 %281%29.png" />
+    <Content Include="Resources\icons8-cafe-96 %2810%29.png" />
+    <Content Include="Resources\icons8-cafe-96 %2811%29.png" />
+    <Content Include="Resources\icons8-cafe-96 %2813%29.png" />
+    <Content Include="Resources\icons8-cafe-96 %2814%29.png" />
+    <Content Include="Resources\icons8-cafe-96 %2815%29.png" />
+    <Content Include="Resources\icons8-cafe-96 %282%29.png" />
+    <Content Include="Resources\icons8-cafe-96 %283%29.png" />
+    <Content Include="Resources\icons8-cafe-96 %284%29.png" />
+    <Content Include="Resources\icons8-cafe-96 %285%29.png" />
+    <Content Include="Resources\icons8-cafe-96 %286%29.png" />
+    <Content Include="Resources\icons8-cafe-96 %287%29.png" />
+    <Content Include="Resources\icons8-cafe-96 %288%29.png" />
+    <Content Include="Resources\icons8-cafe-96 %289%29.png" />
+    <Content Include="Resources\icons8-cafe-96 16.png" />
+    <Content Include="Resources\icons8-cafe-96.png" />
+    <Content Include="Resources\icons8-close-window-401.png" />
+    <None Include="Resources\lycaffee.jpg" />
+    <None Include="Resources\icons8-edit-240 %281%29.png" />
+    <Content Include="Resources\icons8-erase-80.png" />
+    <Content Include="Resources\icons8-plus-2401.png" />
+    <Content Include="Resources\icons8-return-80.png" />
+    <Content Include="Resources\icons8-search-240.png" />
+    <Content Include="Resources\icons8-trash-can-240 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
